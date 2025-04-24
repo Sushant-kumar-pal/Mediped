@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Disease Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="/predict" method="post">
+      <label for="feature2">Rainfall:</label><br>
+      <input type="text" id="feature2" name="feature2"><br>
+      <label for="feature3">Temperature</label><br>
+      <input type="text" id="feature3" name="feature3"><br>
+      <label for="feature4">Humidity</label><br>
+      <input type="text" id="feature4" name="feature4"><br>
+      <label for="feature5">State</label><br>
+      <input type="text" id="feature5" name="feature5"><br>
+      <label for="feature6">Mosquito</label><br>
+      <input type="text" id="feature6" name="feature6"><br>
+
+      <input type="submit" value="Submit">
+  </form>
+        <a href="/">Reset</a>
+    </form>
+   <br>
+   <br>
+   <div>
+    <p>{{ prediction_text }}</p>
+    <p>{{ pt2 }}</p>
+    <p>{{ pt3 }}</p>
+    <p>{{ pt4 }}</p>
+   </div>
+
+ </div>
+ 
+</body>
+</html>
